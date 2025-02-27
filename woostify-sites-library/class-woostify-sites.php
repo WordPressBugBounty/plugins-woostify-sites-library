@@ -632,7 +632,7 @@ class Woostify_Sites {
 			<?php printf( esc_html( $strings['title%s%s%s%s'] ), '<ti', 'tle>', esc_html( $this->theme->name ), '</title>' ); ?>
 			<?php // do_action( 'admin_print_styles' ); ?>
 			<?php // do_action( 'admin_enqueue_scripts' ); ?>
-			<?php do_action( 'admin_head' ); ?>
+			<?php wp_enqueue_admin_bar_header_styles(); ?>
 		</head>
 		<body class="merlin__body merlin__body--<?php echo esc_attr( $current_step ); ?>">
 		<?php
@@ -1471,7 +1471,6 @@ class Woostify_Sites {
 				<div class="merlin__demos-wrapper">
 					<div class="warning-before-install-demo">
 						<span class="dashicons dashicons-warning"></span>
-						<div class="warning-content">To use the demo, make sure <b>Flexbox Container</b> feature is activated. You can check it <a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-admin/admin.php?page=elementor#tab-experiments" target="blank">here</a></div>
 					</div>
 					<div class="merlin__demos" data-callback="load_demo">
 						<?php foreach ( $demos[0] as $import_file ) : ?>
@@ -2916,23 +2915,25 @@ class Woostify_Sites {
 	public function get_import_steps_html( $import_info ) {
 		ob_start();
 		?>
-		<?php foreach ( $import_info as $slug => $available ) : ?>
-			<?php
-			if ( ! $available ) {
-				continue;
-			}
-			?>
-
-			<li class="merlin__drawer--import-content__list-item status status--Pending" data-content="<?php echo esc_attr( $slug ); ?>">
-				<input type="checkbox" name="default_content[<?php echo esc_attr( $slug ); ?>]" class="checkbox checkbox-<?php echo esc_attr( $slug ); ?>" id="default_content_<?php echo esc_attr( $slug ); ?>" value="1" checked>
-				<label for="default_content_<?php echo esc_attr( $slug ); ?>">
-					<i></i><span><?php echo esc_html( ucfirst( str_replace( '_', ' ', $slug ) ) ); ?></span>
-				</label>
-			</li>
-
-		<?php endforeach; ?>
 		<?php
+		if (is_array($import_info) && count($import_info) > 0) {
+			foreach ( $import_info as $slug => $available ) : ?>
+				<?php
+				if ( ! $available ) {
+					continue;
+				}
+				?>
 
+				<li class="merlin__drawer--import-content__list-item status status--Pending" data-content="<?php echo esc_attr( $slug ); ?>">
+					<input type="checkbox" name="default_content[<?php echo esc_attr( $slug ); ?>]" class="checkbox checkbox-<?php echo esc_attr( $slug ); ?>" id="default_content_<?php echo esc_attr( $slug ); ?>" value="1" checked>
+					<label for="default_content_<?php echo esc_attr( $slug ); ?>">
+						<i></i><span><?php echo esc_html( ucfirst( str_replace( '_', ' ', $slug ) ) ); ?></span>
+					</label>
+				</li>
+
+			<?php endforeach; ?>
+			<?php
+		}
 		return ob_get_clean();
 	}
 
