@@ -1469,9 +1469,6 @@ class Woostify_Sites {
 
 			<?php if ( 1 < count( $demos[0] ) ) : ?>
 				<div class="merlin__demos-wrapper">
-					<div class="warning-before-install-demo">
-						<span class="dashicons dashicons-warning"></span>
-					</div>
 					<div class="merlin__demos" data-callback="load_demo">
 						<?php foreach ( $demos[0] as $import_file ) : ?>
 							<?php
@@ -2945,7 +2942,6 @@ class Woostify_Sites {
 		delete_transient( 'woostify_sites_import_file_base_name' );
 		wp_send_json_success();
 	}
-
 
 	/**
 	 * Choose Plugin current demo.
