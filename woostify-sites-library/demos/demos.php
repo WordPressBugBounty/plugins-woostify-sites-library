@@ -1025,6 +1025,115 @@ function woostify_sites_local_import_files() {
 			),
 		),
 
+		array(
+			'id'                           => 29,
+			'import_file_name'             => 'Eciton',
+			'local_import_file'            => WOOSTIFY_SITES_DIR . 'demos/demo-30/demo-content.xml',
+			'local_import_widget_file'     => WOOSTIFY_SITES_DIR . 'demos/demo-30/widgets.wie',
+			'local_import_customizer_file' => WOOSTIFY_SITES_DIR . 'demos/demo-30/customizer.dat',
+			'import_preview_image_url'     => WOOSTIFY_SITES_URI . 'demos/demo-30/demo-30.jpg',
+			'import_notice'                => __( 'After you import this demo, you should update permalink.', 'woostify' ),
+			'preview_url'                  => 'https://demo.woostify.com/eciton/',
+			'homepage'                     => 'Home',
+			'blog_page'                    => 'Blog',
+			'primary_menu'                 => 'Primary Menu',
+			'vertical_menu'                => 'Menu Vertical',
+			'footer_menu'                  => '',
+			'type'                         => 'pro',
+			'page_builder'                 => 'elementor',
+			'font_page'                    => 382,
+			'page'                         => array(
+				'382' => array(
+					'title'   => 'Home',
+					'id'      => 382,
+					'preview' => WOOSTIFY_SITES_URI . 'demos/demo-30/demo-30.jpg',
+
+				),
+				'411' => array(
+					'title'   => 'Contact',
+					'id'      => 411,
+					'preview' => WOOSTIFY_SITES_URI . 'demos/demo-30/contact.jpg',
+				),
+				'413' => array(
+					'title'   => 'About Us',
+					'id'      => 413,
+					'preview' => WOOSTIFY_SITES_URI . 'demos/demo-30/about.jpg',
+				),
+			),
+		),
+
+		array(
+			'id'                           => 30,
+			'import_file_name'             => 'Vitax',
+			'local_import_file'            => WOOSTIFY_SITES_DIR . 'demos/demo-31/demo-content.xml',
+			'local_import_widget_file'     => WOOSTIFY_SITES_DIR . 'demos/demo-31/widgets.wie',
+			'local_import_customizer_file' => WOOSTIFY_SITES_DIR . 'demos/demo-31/customizer.dat',
+			'import_preview_image_url'     => WOOSTIFY_SITES_URI . 'demos/demo-31/demo-31.jpg',
+			'import_notice'                => __( 'After you import this demo, you should update permalink.', 'woostify' ),
+			'preview_url'                  => 'https://demo.woostify.com/vitax/',
+			'homepage'                     => 'Home',
+			'blog_page'                    => 'Blog',
+			'primary_menu'                 => 'Menu Primary',
+			'footer_menu'                  => '',
+			'type'                         => 'pro',
+			'page_builder'                 => 'elementor',
+			'font_page'                    => 62,
+			'page'                         => array(
+				'62' => array(
+					'title'   => 'Home',
+					'id'      => 62,
+					'preview' => WOOSTIFY_SITES_URI . 'demos/demo-31/demo-31.jpg',
+
+				),
+				'68' => array(
+					'title'   => 'Contact',
+					'id'      => 68,
+					'preview' => WOOSTIFY_SITES_URI . 'demos/demo-31/contact.jpg',
+				),
+				'430' => array(
+					'title'   => 'About Us',
+					'id'      => 430,
+					'preview' => WOOSTIFY_SITES_URI . 'demos/demo-31/about.jpg',
+				),
+			),
+		),
+
+		array(
+			'id'                           => 31,
+			'import_file_name'             => 'Drinks',
+			'local_import_file'            => WOOSTIFY_SITES_DIR . 'demos/demo-32/demo-content.xml',
+			'local_import_widget_file'     => WOOSTIFY_SITES_DIR . 'demos/demo-32/widgets.wie',
+			'local_import_customizer_file' => WOOSTIFY_SITES_DIR . 'demos/demo-32/customizer.dat',
+			'import_preview_image_url'     => WOOSTIFY_SITES_URI . 'demos/demo-32/demo-32.jpg',
+			'import_notice'                => __( 'After you import this demo, you should update permalink.', 'woostify' ),
+			'preview_url'                  => 'https://demo.woostify.com/drinks/',
+			'homepage'                     => 'Home',
+			'blog_page'                    => 'Blog',
+			'primary_menu'                 => 'Menu Primary',
+			'footer_menu'                  => '',
+			'type'                         => 'pro',
+			'page_builder'                 => 'elementor',
+			'font_page'                    => 691,
+			'page'                         => array(
+				'691' => array(
+					'title'   => 'Home',
+					'id'      => 691,
+					'preview' => WOOSTIFY_SITES_URI . 'demos/demo-32/demo-32.jpg',
+
+				),
+				'279' => array(
+					'title'   => 'Contact',
+					'id'      => 279,
+					'preview' => WOOSTIFY_SITES_URI . 'demos/demo-32/contact.jpg',
+				),
+				'326' => array(
+					'title'   => 'About Us',
+					'id'      => 326,
+					'preview' => WOOSTIFY_SITES_URI . 'demos/demo-32/about.jpg',
+				),
+			),
+		),
+
 	);
 }
 add_filter( 'woostify_sites_import_files', 'woostify_sites_local_import_files' );
